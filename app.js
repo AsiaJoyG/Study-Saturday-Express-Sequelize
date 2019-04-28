@@ -20,6 +20,10 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
+app.use((req,res) => {
+  res.status(404).send('Page Not Found')
+})
+
 const init = async () => {
 
   if (require.main === module){
